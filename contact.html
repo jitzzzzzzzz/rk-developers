@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | RK Developers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form-wrapper {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .contact-form-wrapper h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #002f6c;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #ffb400;
+      color: #002f6c;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #e6a700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1>RK Developers</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="contact-form-wrapper">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/myzwrdpk" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RK Developers | Designed by Jithendra Sai Pappuri</p>
+    </div>
+  </footer>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919948529153" class="whatsapp-float" target="_blank">
+    <img src="whatsapp-icon.png" alt="Chat on WhatsApp" />
+  </a>
+  <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+<script>
+  // Show/hide the button on scroll
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RK Developers | Pulivendula</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1>RK Developers</h1>
+      <nav>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>BRINGING YOUR DREAMS INTO REALITY</h2>
+      <p>Innovative, affordable, and reliable construction in Pulivendula.</p>
+      
+    </div>
+    <div class="hero-img">
+      <img src="hero-banner.jpg" alt="Construction Banner" />
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="project1.jpg" alt="Project 1" />
+          <h3>2BHK Triangle Homes</h3>
+        </div>
+        <div class="card">
+          <img src="project2.jpg" alt="Project 2" />
+          <h3>Sree Rama Bypass Villas</h3>
+        </div>
+        <div class="card">
+          <img src="project3.jpg" alt="Project 3" />
+          <h3>Rotaripuram Layout</h3>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="projects.html" class="btn">View More About Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About RK Developers</h2>
+      <p>RK Developers, founded in Pulivendula, specializes in prefabricated wall technology and modern residential designs. With a strong foundation in quality and trust, we aim to deliver timely, cost-effective projects across Andhra Pradesh.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <ul>
+        <li>Residential & Commercial Construction</li>
+        <li>Prefabricated Wall Technology</li>
+        <li>Architectural & Structural Design</li>
+        <li>Affordable Housing Models</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RK Developers | Designed by Jithendra Sai Pappuri</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919948529153" class="whatsapp-float" target="_blank">
+    <img src="whatsapp-icon.png" alt="Chat on WhatsApp" />
+  </a>
+
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Show/hide the button on scroll
+    window.onscroll = function() {
+      const btn = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Smooth scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | RK Developers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .project-entry {
+      background: #fff;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .project-entry h2 {
+      background-color: #002f6c;
+      color: #fff;
+      padding: 16px;
+      margin: 0;
+    }
+    .project-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .project-text {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+    .project-text ul {
+      padding-left: 20px;
+    }
+    .project-gallery {
+      flex: 1 1 300px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 20px;
+    }
+    .project-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1>RK Developers</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="projects-page">
+    <div class="project-entry">
+      <h2>2BHK Triangle Homes</h2>
+      <div class="project-content">
+        <div class="project-text">
+          <p>Modern triangular homes built with prefabricated walls, perfect for small families looking for comfort and affordability.</p>
+          <ul>
+            <li>600 sq.ft. each unit</li>
+            <li>Open plan kitchen-living design</li>
+            <li>Eco-friendly construction</li>
+          </ul>
+        </div>
+        <div class="project-gallery">
+          <img src="triangle1.jpg" alt="Triangle Home 1">
+          <img src="triangle2.jpg" alt="Triangle Home 2">
+          <img src="triangle3.jpg" alt="Triangle Home 3">
+          <img src="triangle4.jpg" alt="Triangle Home 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <h2>Sree Rama Bypass Villas</h2>
+      <div class="project-content">
+        <div class="project-text">
+          <p>Luxury villas situated near the scenic Sree Rama bypass. Spacious, airy, and equipped with modern amenities.</p>
+          <ul>
+            <li>G+1 Layout</li>
+            <li>Private gardens</li>
+            <li>24/7 security systems</li>
+          </ul>
+        </div>
+        <div class="project-gallery">
+          <img src="rama1.jpg" alt="Villa 1">
+          <img src="rama2.jpg" alt="Villa 2">
+          <img src="rama3.jpg" alt="Villa 3">
+          <img src="rama4.jpg" alt="Villa 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <h2>Rotaripuram Layout</h2>
+      <div class="project-content">
+        <div class="project-text">
+          <p>An affordable plotted development ideal for first-time home buyers and investors looking for long-term value.</p>
+          <ul>
+            <li>Approved layouts with clear documentation</li>
+            <li>Roads and drainage facilities</li>
+            <li>Close to local schools and markets</li>
+          </ul>
+        </div>
+        <div class="project-gallery">
+          <img src="layout1.jpg" alt="Layout 1">
+          <img src="layout2.jpg" alt="Layout 2">
+          <img src="layout3.jpg" alt="Layout 3">
+          <img src="layout4.jpg" alt="Layout 4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RK Developers | Designed by Jithendra Sai Pappuri</p>
+    </div>
+  </footer>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919948529153" class="whatsapp-float" target="_blank">
+    <img src="whatsapp-icon.png" alt="Chat on WhatsApp" />
+  </a>
+  <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+<script>
+  // Show/hide the button on scroll
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
