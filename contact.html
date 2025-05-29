@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | RK Developers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fffaf3;
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #3e1f1c;
+      padding: 15px 0;
+      color: #f9c846;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav ul li a {
+      text-decoration: none;
+      color: #f9c846;
+      font-weight: bold;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      gap: 40px;
+      padding: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .left-box, .right-box {
+      flex: 1;
+      min-width: 300px;
+      background: #fce9c2;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h2, .contact-form h2 {
+      color: #3e1f1c;
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .info-item a {
+      color: #3e1f1c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .info-item a:hover {
+      text-decoration: underline;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #f9c846;
+      color: #1a1a1a;
+      font-weight: bold;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6a700;
+    }
+
+    footer {
+      background-color: #3e1f1c;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1>RK Developers</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container contact-wrapper">
+    <div class="left-box">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <div class="info-item"><strong>📍 Address:</strong> Near 90s Cafe, Pulivendula, Andhra Pradesh</div>
+        <div class="info-item"><strong>📞 Phone:</strong> <a href="tel:+919948529153">+91 99485 29153</a></div>
+        <div class="info-item"><strong>📧 Email:</strong> <a href="mailto:rkdeveloperz1990@gmail.com">rkdeveloperz1990@gmail.com</a></div>
+        <div class="info-item"><strong>🕐 Hours:</strong> Mon–Sat, 9 AM – 6 PM</div>
+      </div>
+
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62169.61649063846!2d78.1846208!3d14.4173334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb3f20746a2f95b%3A0x7e05d9007dd6eb38!2s90s%20Cafe!5e0!3m2!1sen!2sin!4v1716927232271!5m2!1sen!2sin" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <div class="info-item" style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
+        <strong>🌐 Follow Us:</strong>
+        <a href="https://www.instagram.com/rkdeveloperz1990/" target="_blank" style="display: flex; align-items: center; gap: 6px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;">
+          Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="right-box contact-form">
+      <h2>Send a Message</h2>
+      <form onsubmit="sendWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="tel" id="phone" placeholder="Your Phone Number">
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">📲 Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 RK Developers | Designed by Jithendra Sai Pappuri</p>
+  </footer>
+
+  <script>
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+      const fullMessage = 
+        `Hi, my name is ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      window.open(`https://wa.me/919948529153?text=${fullMessage}`, '_blank');
+    }
+  </script>
+</body>
+</html>

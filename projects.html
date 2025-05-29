@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | RK Developers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fffaf3;
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #3e1f1c;
+      padding: 15px 0;
+      color: #f9c846;
+    }
+
+    .container.nav {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav ul li a {
+      text-decoration: none;
+      color: #f9c846;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-logo {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+    }
+
+    .projects-page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .project-entry {
+      background: #fce9c2;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .project-entry h2 {
+      background-color: #3e1f1c;
+      color: #f9c846;
+      padding: 16px;
+      margin: 0;
+    }
+
+    .project-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .project-text {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+
+    .project-text ul {
+      padding-left: 20px;
+    }
+
+    .project-gallery {
+      flex: 1 1 300px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .project-content {
+        flex-direction: column;
+      }
+    }
+
+    footer {
+      background-color: #3e1f1c;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 50px;
+      height: 50px;
+    }
+
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      font-size: 18px;
+      background-color: #f9c846;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    #backToTopBtn:hover {
+      background-color: #e6a700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo-title">
+        <img src="logo.png" alt="RK Developers Logo" class="site-logo">
+        <h1>RK Developers</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="projects-page">
+    <div class="project-entry">
+      <h2>2BHK Triangle Homes</h2>
+      <div class="project-content">
+        <div class="project-text">
+          <p>Modern triangular homes built with prefabricated walls, perfect for small families looking for comfort and affordability.</p>
+          <ul>
+            <li>600 sq.ft. each unit</li>
+            <li>Open plan kitchen-living design</li>
+            <li>Eco-friendly construction</li>
+          </ul>
+        </div>
+        <div class="project-gallery">
+          <img src="triangle1.jpg" alt="Triangle Home 1">
+          <img src="triangle2.jpg" alt="Triangle Home 2">
+          <img src="triangle3.jpg" alt="Triangle Home 3">
+          <img src="triangle4.jpg" alt="Triangle Home 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <h2>Sree Rama Bypass Villas</h2>
+      <div class="project-content">
+        <div class="project-text">
+          <p>Luxury villas situated near the scenic Sree Rama bypass. Spacious, airy, and equipped with modern amenities.</p>
+          <ul>
+            <li>G+1 Layout</li>
+            <li>Private gardens</li>
+            <li>24/7 security systems</li>
+          </ul>
+        </div>
+        <div class="project-gallery">
+          <img src="rama1.jpg" alt="Villa 1">
+          <img src="rama2.jpg" alt="Villa 2">
+          <img src="rama3.jpg" alt="Villa 3">
+          <img src="rama4.jpg" alt="Villa 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <h2>Rotaripuram Layout</h2>
+      <div class="project-content">
+        <div class="project-text">
+          <p>An affordable plotted development ideal for first-time home buyers and investors looking for long-term value.</p>
+          <ul>
+            <li>Approved layouts with clear documentation</li>
+            <li>Roads and drainage facilities</li>
+            <li>Close to local schools and markets</li>
+          </ul>
+        </div>
+        <div class="project-gallery">
+          <img src="layout1.jpg" alt="Layout 1">
+          <img src="layout2.jpg" alt="Layout 2">
+          <img src="layout3.jpg" alt="Layout 3">
+          <img src="layout4.jpg" alt="Layout 4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RK Developers | Designed by Jithendra Sai Pappuri</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919948529153" class="whatsapp-float" target="_blank">
+    <img src="whatsapp-icon.png" alt="Chat on WhatsApp" />
+  </a>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTopBtn");
+      btn.style.display =
+        document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
+          ? "block"
+          : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

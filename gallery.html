@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | RK Developers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fffaf3;
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #3e1f1c;
+      padding: 15px 0;
+      color: #f9c846;
+    }
+
+    .container.nav {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-logo {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav ul li a {
+      text-decoration: none;
+      color: #f9c846;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    .gallery-title {
+      text-align: center;
+      padding: 40px 0 20px;
+      font-size: 32px;
+      color: #3e1f1c;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #3e1f1c;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 50px;
+      height: 50px;
+    }
+
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      font-size: 22px;
+      background-color: #f9c846;
+      color: #3e1f1c;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #e6a700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo-title">
+        <img src="logo.png" alt="RK Developers Logo" class="site-logo">
+        <h1>RK Developers</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h2 class="gallery-title" data-aos="fade-down">Our Gallery</h2>
+  <div class="gallery">
+    <a href="gallery1.jpg" class="glightbox" data-aos="zoom-in"><img src="gallery1.jpg" alt="Gallery Image 1"></a>
+    <a href="gallery2.jpg" class="glightbox" data-aos="zoom-in"><img src="gallery2.jpg" alt="Gallery Image 2"></a>
+    <a href="gallery3.jpg" class="glightbox" data-aos="zoom-in"><img src="gallery3.jpg" alt="Gallery Image 3"></a>
+    <a href="gallery4.jpg" class="glightbox" data-aos="zoom-in"><img src="gallery4.jpg" alt="Gallery Image 4"></a>
+    <a href="gallery5.jpg" class="glightbox" data-aos="zoom-in"><img src="gallery5.jpg" alt="Gallery Image 5"></a>
+    <a href="gallery6.jpg" class="glightbox" data-aos="zoom-in"><img src="gallery6.jpg" alt="Gallery Image 6"></a>
+  </div>
+
+  <a href="https://wa.me/919948529153" class="whatsapp-float" target="_blank">
+    <img src="whatsapp-icon.png" alt="Chat on WhatsApp" />
+  </a>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RK Developers | Designed by Jithendra Sai Pappuri</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    window.onscroll = function() {
+      const btn = document.getElementById("backToTopBtn");
+      btn.style.display = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
